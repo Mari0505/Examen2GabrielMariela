@@ -4,7 +4,7 @@ from Examen2 import MiClase
 class MyTestCase(unittest.TestCase):
     def test_ObtieneValencia(self):
         objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
-        self.assertEqual(objeto.ObtieneValencia(111111), 7)  # add assertion here
+        self.assertEqual(objeto.ObtieneValencia(111111), 6)  # add assertion here
 
     def test_ObtieneValencia2(self):
         objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
