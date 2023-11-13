@@ -34,7 +34,13 @@ class MyTestCase(unittest.TestCase):
         objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
         self.assertEqual(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]), True)
 
+    def test_Encuentra(self):
+        objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+        self.assertFalse(objeto.Encuentra([1, 4, 8], 10), False)
 
+    def test_Encuentra2(self):
+        objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+        self.assertEqual(objeto.Encuentra([1.5, 4, 8], 10), None)
 
 
 if __name__ == '__main__':
