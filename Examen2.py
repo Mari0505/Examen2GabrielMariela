@@ -6,6 +6,7 @@ class MiClase:
         self.listaCanciones = listaCanciones
         self.listaBailabilidad = listaBailabilidad
 
+
     def ObtieneValencia(self, numero):
         # Convierte el número en una cadena para contar los dígitos impares
         numero_str = str(numero)
@@ -26,6 +27,14 @@ class MiClase:
             return False
         return True
 
+    def Encuentra(self, lista, elemento):
+        if all(isinstance(e, int) for e in lista):
+            if elemento in lista:
+                return True
+            else:
+                return False
+
+
 
 ################################################################################################
 #Ejemplo de ejecución
@@ -36,3 +45,4 @@ print(objeto.ObtieneValencia(1234567))  # Debería imprimir 4
 print(objeto.DivisibleTempo(10))  # Debería imprimir [1, 2, 5, 10]
 print(objeto.ObtieneMasBailable([0.8, 0.9, 0.7]))  # Debería imprimir 0.9
 print(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]))  # Debería imprimir True
+print(objeto.Encuentra([10,20,30],10)) # Debería imprimir True
