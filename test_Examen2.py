@@ -18,6 +18,22 @@ class MyTestCase(unittest.TestCase):
         objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
         self.assertEqual(objeto.DivisibleTempo(36), [1,2,3,4,6,9,12,18,36])  # add assertion here
 
+    def test_ObtieneMasBailable (self):
+        objeto = MiClase (5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+        self.assertIsNone(objeto.ObtieneMasBailable([]), None)  # add assertion here
+
+    def test_ObtieneMasBailable2(self):
+       objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+       self.assertEqual(objeto.ObtieneMasBailable ([0.78, 0.98, 0.80]), 0.98)
+
+    def test_VerificaListaCanciones(self):
+        objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+        self.assertEqual (objeto.VerificaListaCanciones(["Canción 1", None, "Canción 3"]), False)# add assertion here
+
+    def test_VerificaListaCanciones2(self):
+        objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+        self.assertEqual(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]), True)
+
 
 if __name__ == '__main__':
     unittest.main()

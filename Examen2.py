@@ -25,6 +25,8 @@ class MiClase:
         if any(song is None for song in lista):
             return False
         return True
+
+
 ################################################################################################
 #Ejemplo de ejecución
 # Crear un objeto de la clase MiClase
